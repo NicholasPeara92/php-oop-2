@@ -1,19 +1,39 @@
 <?php
 
 class Product {
-  public $category;
-  public $image;
-  public $title;
-  public $price;
-  public $type;
+  
+  private $image;
+  private $name;
+  private $price;
+  private $category;
+  
 
-  public function __construct($category, $image, $title, float $price, $type)
+  public function __construct($image, $name, float $price, Category $category)
   {
-    $this->category = $category;
+    
     $this->image = $image;
-    $this->title = $title;
+    $this->name = $name;
     $this->price = $price;
-    $this->type = $type;
+    $this->category = $category;
 
+    
+
+  }
+
+  public function getName()
+  {
+    return $this->name;
+  }
+  public function getImage()
+  {
+    return $this->image;
+  }
+  public function getPrice()
+  {
+    return $this->price;
+  }
+  public function getCategory()
+  {
+    return $this->category;
   }
 }

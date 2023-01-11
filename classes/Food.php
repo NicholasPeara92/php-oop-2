@@ -2,11 +2,25 @@
 require_once __DIR__ . "/Product.php";
 
 class Food extends Product {
-  public $flavour;
+  private $flavour;
+  private $expiration;
 
-  public function __construct($category, $image, $title, $price, $type, $flavour)
+  public function setFlavour($flavour)
   {
-    parent::__construct($category, $image, $title, $price, $type);
     $this->flavour = $flavour;
   }
+  public function getFlavour()
+  {
+    return $this->flavour;
+  }
+  public function setExpiration($date)
+  {
+    $this->expiration = $date;
+  }
+  public function getExpiration()
+  {
+    return $this->expiration;
+  }
 }
+
+?>

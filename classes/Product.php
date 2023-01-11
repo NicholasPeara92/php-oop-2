@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__. "/../trait/Name.php";
+require_once __DIR__. "/../traits/Name.php";
 class Product {
   use Name;
   private $image;
@@ -12,10 +12,12 @@ class Product {
     
     $this->image = $image;
     $this->name = $name;
-    $this->price = $price;
     $this->category = $category;
-
     
+    if($price < 1) {
+      throw new Exception("inserito valore errato");
+    }
+    $this->price = $price;
 
   }
 

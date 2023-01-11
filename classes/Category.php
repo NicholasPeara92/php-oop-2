@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__. "/../trait/Name.php";
+require_once __DIR__. "/../traits/Name.php";
 class Category {
   use Name;
   private $icon;

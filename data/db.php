@@ -17,9 +17,13 @@ $toy->setMaterial("plastica");
 
 $prod_base = new Product("https://m.media-amazon.com/images/I/A1gCimTIrtL._AC_UL320_.jpg", "cuccia per cani", 30, $dog);
 
+try{
+  $products = [
+    $food,
+    $toy,
+    $prod_base,
+  ];
 
-$products = [
-  $food,
-  $toy,
-  $prod_base,
-];
+} catch(Exception $e) {
+  echo $e->getMessage();
+}

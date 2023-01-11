@@ -1,9 +1,8 @@
 <?php
-
+require_once __DIR__. "/../trait/Name.php";
 class Product {
-  
+  use Name;
   private $image;
-  private $name;
   private $price;
   private $category;
   

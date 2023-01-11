@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__. "/../trait/Name.php";
 class Category {
-  private $name;
+  use Name;
   private $icon;
 
   public function __construct($name, $icon)
